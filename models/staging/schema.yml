@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned orders data from raw seed"
+    columns:
+      - name: order_key
+        description: "Primary key for orders"
+        tests:
+          - not_null
+          - unique
+      - name: region_key
+        description: "Foreign key to regions"
+        tests:
+          - not_null
+      - name: total_price
+        description: "Order total price in decimal format"
+        tests:
+          - not_null
+      - name: order_date
+        description: "Date the order was placed (dd/mm/yyyy)"
+        tests:
+          - not_null
+
+  - name: stg_regions
+    description: "Region reference data"
+    columns:
+      - name: region_key
+        description: "Primary key for regions"
+        tests:
+          - not_null
+          - unique
+      - name: region_name
+        description: "Name of the region"
+        tests:
+          - not_null

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: volume_by_region
+    description: "Total number of orders by region for the past year"
+    columns:
+      - name: region_name
+        description: "Name of the region"
+        tests:
+          - not_null
+          - unique
+      - name: total_orders
+        description: "Total number of orders"
+        tests:
+          - not_null
+
+  - name: revenue_by_region
+    description: "Total revenue by region for the past year"
+    columns:
+      - name: region_name
+        description: "Name of the region"
+        tests:
+          - not_null
+          - unique
+      - name: total_revenue
+        description: "Total revenue in decimal format"
+        tests:
+          - not_null

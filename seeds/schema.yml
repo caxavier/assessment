@@ -1,0 +1,16 @@
+version: 2
+
+seeds:
+  - name: ORDERS
+    config:
+      column_types:
+        O_ORDERKEY: bigint
+        O_CUSTKEY: bigint
+        O_REGIONKEY: bigint
+        O_ORDERSTATUS: varchar
+        O_TOTALPRICE: double
+        O_ORDERDATE: date
+        O_ORDERPRIORITY: varchar
+        O_CLERK: varchar
+        O_SHIPPRIORITY: bigint
+        O_COMMENT: varchar
